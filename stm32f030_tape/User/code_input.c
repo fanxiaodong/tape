@@ -103,7 +103,7 @@ code_pin_t data_pin_ctl =
 		.GPIO_OType = GPIO_OType_PP,
 		.GPIO_PuPd 	= GPIO_PuPd_NOPULL,
 		},
-		.status = 0,
+		.status = 0xffff,
 	},
 	.data_pin[DATA_7]={
 		.gpio_clk = RCC_AHBPeriph_GPIOA,

@@ -21,16 +21,28 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.15.0_KEIL
 Dialog DLL:      TCM.DLL V1.14.5.0
  
 <h2>Project:</h2>
-E:\work_fan\stm32\LED-PA4\Proj\LED.uvprojx
-Project File Date:  08/23/2016
+E:\work_fan\stm32\git_tape\tape\stm32f030_tape\Proj\LED.uvprojx
+Project File Date:  09/11/2016
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 2 (build 169)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Target 1'
-".\LED.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\User\main.c(121): warning:  #177-D: variable "new_code" was declared but never referenced
+        int new_code,ag = 0;
+..\User\main.c(121): warning:  #177-D: variable "ag" was declared but never referenced
+        int new_code,ag = 0;
+..\User\main.c(264): warning:  #177-D: function "gray_to_binary" was declared but never referenced
+  static uint16_t gray_to_binary(uint16_t gray)
+..\User\main.c(81): warning:  #177-D: function "get_rever_code_input" was declared but never referenced
+  static int get_rever_code_input(void)
+..\User\main.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=9180 RO-data=268 RW-data=420 ZI-data=1676  
+".\LED.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
-  E:\work_fan\stm32\LED-PA4\Proj\RTE
+  E:\work_fan\stm32\git_tape\tape\stm32f030_tape\Proj\RTE
   C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>

@@ -117,7 +117,7 @@ static void printf_bit(short byte)
 }
 int main(void)
 {	
-	int code_val , i;
+	int code_val , i, adc_val,adc_val_tmp;
 	int new_code,ag = 0;
 	ALL_Config();
 	
@@ -131,8 +131,12 @@ int main(void)
 		printf("---i = %d \t",code_val);
 		printf_bit(code_val);
 	}
+
+	board_ADC_init();
+
 //set_infrared_en(0);
 	code_val = 0;
+	adc_val = 0;
 
 	while(1){
 		//gpio_bit_val
@@ -143,6 +147,17 @@ int main(void)
 			printf("0x%08x %d\n",gpio_bit_val,gray2index[code_val]);
 			 
 		}
+		if(is_ADC_end())
+		{
+		
+			adc_val_tmp = get_vol_val();
+			if((adc_val_tmp - adc_val > 100)
+			   ||(adc_val - adc_val_tmp> 100)){
+				adc_val = adc_val_tmp;
+				printf("vol = %d\n",adc_val);
+			}
+		//	Delay(800000);
+		}		
 	}
 	
 	#if 0

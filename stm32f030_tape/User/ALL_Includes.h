@@ -15,7 +15,7 @@
 #include "led.h"
 #include "USART1.h"
 #include "board_gpio.h"
-
+#include "board_adc.h"
 
 #define arry_size(arry) (sizeof(arry)/sizeof(arry[0]))
 
