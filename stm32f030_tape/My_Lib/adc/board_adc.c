@@ -112,9 +112,9 @@ int is_ADC_end(void){
 	ADC_dev_t *pdev = &ADC_dev_1;
 
 	if(ADC_GetFlagStatus(pdev->ADC_dev, ADC_FLAG_EOC)){
-		return 1;
+		return TRUE;
 	}else{
-		return 0;
+		return FALSE;
 	}
 
 }

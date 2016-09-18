@@ -143,7 +143,7 @@ void init_code_input(void)
 
 	gpio_intr.exti_init_val.EXTI_Line = gpio_intr.pgpio_info->init_val.GPIO_Pin;
 	
-	gpio_interrupt_Config(&gpio_intr);
+	//gpio_interrupt_Config(&gpio_intr);
 	
 }
 
@@ -162,3 +162,27 @@ void set_infrared_en(int enable)
 {
 	set_gpio_pin_val(&data_pin_ctl.data_pin[DATA_7],enable);
 }
+
+
+#define MAX_BIT 8
+
+void printf_bit(short byte)
+{
+	int i;
+	char str_byte[MAX_BIT+1]={0};
+	
+	for(i = 0 ;i < MAX_BIT ; i++){
+		if(byte & (1<<i)){
+			str_byte[MAX_BIT - 1 - i] = '1';
+		}else{
+			str_byte[MAX_BIT - 1 - i] = '0';
+		}
+	}
+
+	str_byte[MAX_BIT] = '\n';
+	
+	printf("0x%02x,%s\n",byte,str_byte);
+	//printf("[0x%02x]=,\n",byte,str_byte);
+}
+
+

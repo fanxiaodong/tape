@@ -369,7 +369,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER, STM32F0XX_LD,</Define>
               <Undefine></Undefine>
-              <IncludePath>..\ST_Lib\inc;..\ST_Lib\src;..\System\CMSIS;..\System\startup;..\User;..\My_Lib\delay;..\My_Lib\LED;..\My_Lib\gpio;..\My_Lib\uart</IncludePath>
+              <IncludePath>..\ST_Lib\inc;..\ST_Lib\src;..\System\CMSIS;..\System\startup;..\User;..\My_Lib\delay;..\My_Lib\LED;..\My_Lib\gpio;..\My_Lib\uart;..\My_Lib\adc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -452,6 +452,11 @@
               <FileType>1</FileType>
               <FilePath>..\ST_Lib\src\stm32f0xx_exti.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f0xx_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ST_Lib\src\stm32f0xx_adc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -481,6 +486,16 @@
               <FileName>USART1.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\My_Lib\uart\USART1.c</FilePath>
+            </File>
+            <File>
+              <FileName>code_proc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\code_proc.c</FilePath>
+            </File>
+            <File>
+              <FileName>board_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\My_Lib\adc\board_adc.c</FilePath>
             </File>
           </Files>
         </Group>

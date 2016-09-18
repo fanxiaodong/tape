@@ -3,19 +3,18 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "MyType.h"
 
-#define  u8    uint8_t
-#define  u16   uint16_t
-#define  u32   uint32_t
+
 
 
 #include "stm32f0xx.h"
-#include "MyType.h"
 #include "delay.h"
 #include "led.h"
 #include "USART1.h"
 #include "board_gpio.h"
 #include "board_adc.h"
+#include "code.h"
 
 #define arry_size(arry) (sizeof(arry)/sizeof(arry[0]))
 
